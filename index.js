@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
-const creds = require("../config/config.js");
+const creds = require("./config/config.js");
 const app = express();
 
 app.use((request, response, next) => {
