@@ -1,7 +1,8 @@
+require("dotenv/config");
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
-const creds = require("./config.js");
 const cors = require("cors");
 
 const app = express();
@@ -28,8 +29,8 @@ app.post("/send", (req, res) => {
     host: "smtp.gmail.com",
     port: 587,
     auth: {
-      user: "mateus1two3@gmail.com",
-      pass: "mateus.202428",
+      user: process.env.GMAIL_USER,
+      pass: process.env.GMAIL_PASS,
     },
     tls: {
       rejectUnauthorized: false,
