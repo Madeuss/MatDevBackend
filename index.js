@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
-const creds = require("./config/config.js");
+const creds = require("./config.js");
 const cors = require("cors");
 
 const app = express();
@@ -28,8 +28,8 @@ app.post("/send", (req, res) => {
     host: "smtp.gmail.com",
     port: 587,
     auth: {
-      user: creds.USER,
-      pass: creds.PASS,
+      user: "mateus1two3@gmail.com",
+      pass: "mateus.202428",
     },
     tls: {
       rejectUnauthorized: false,
