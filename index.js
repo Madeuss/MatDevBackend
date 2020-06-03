@@ -24,7 +24,7 @@ app.use(
 app.post("/send", (req, res) => {
   let data = req.body;
 
-  // create reusable transporter object using the default SMTP transport
+  // create transporter object
   let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 587,
@@ -37,7 +37,7 @@ app.post("/send", (req, res) => {
     },
   });
 
-  // setup email data with unicode symbols
+  // setup email data and info
   let mailOptions = {
     from: "Someone", // sender address
     to: "mateus1two3@gmail.com", // list of receivers
